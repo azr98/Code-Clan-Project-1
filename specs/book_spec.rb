@@ -12,7 +12,7 @@ class TestBook < MiniTest::Test
       'description' => '50s New York Sicilian mafia families struggle for power',
       'stock' => '20',
       'cost' => '4',
-      'price' => '8',
+      'sell_price' => '8',
       'genre' => 'Crime thriller'
       })
 

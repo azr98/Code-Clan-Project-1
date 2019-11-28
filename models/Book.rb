@@ -13,7 +13,7 @@ class Book
     @stock = book_details['stock'].to_i
     @cost = book_details['cost'].to_i
     @genre = book_details['genre']
-    @price = book_details['price'].to_i
+    @sell_price = book_details['sell_price'].to_i
   end
 
 
