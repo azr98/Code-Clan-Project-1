@@ -27,4 +27,17 @@ class Author
     SqlRunner.run(sql)
   end
 
+  def self.all
+    sql = "SELECT * FROM authors"
+    authors = SqlRunner.run(sql)
+    return authors.map{|author| Book.new(author)}
+  end
+
+  def self.destroy(id)
+    sql = "DELETE FROM authors WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql,values)
+  end
+
+
 end
