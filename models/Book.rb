@@ -16,7 +16,18 @@ class Book
     @sell_price = book_details['sell_price'].to_i
   end
 
+  def save
+    sql = "INSERT INTO books (name,description,stock,cost,genre,sell_price)
+    VALUES ($1,$2,$3,$4,$5,$6) RETURNING id"
+    values = [@name,@description,@stock,@cost,@genre,@sell_price,]
+    results = SqlRunner.run(sql,values)
+    @id = results.first()['id'].to_i
+  end
 
+  def self.delete_all
+    sql = "DELETE FROM authors"
+    SqlRunner.run(sql)
+  end
 
 
 end
