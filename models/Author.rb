@@ -30,7 +30,7 @@ class Author
   def self.all
     sql = "SELECT * FROM authors"
     authors = SqlRunner.run(sql)
-    return authors.map{|author| Book.new(author)}
+    return authors.map{|author| Author.new(author)}
   end
 
   def self.destroy(id)
