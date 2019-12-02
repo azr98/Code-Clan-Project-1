@@ -1,0 +1,16 @@
+
+<h1>Here are all authors you currently stock</h1>
+
+
+
+<% for author in @authors %>
+<tr>
+  <td><a href="/authors/<%= author.id %>"><%= author.name %></a></td>
+  <td>|</td>
+  <td><%= author.background %></td>
+  <td>|</td>
+  <td>author.num_of_books</td>
+</tr>
+<br>
+<br>
+<% end %>

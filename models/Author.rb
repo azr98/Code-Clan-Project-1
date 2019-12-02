@@ -1,9 +1,10 @@
 require_relative('../db/sql_runner')
+require("pry-byebug")
 
 class Author
 
-  attr_accessor :name, :background, :num_of_books
-  attr_reader :id
+  attr_accessor :name, :background, :num_of_books, :id
+
 
 
   def initialize(author_details)
@@ -37,6 +38,14 @@ class Author
     sql = "DELETE FROM authors WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql,values)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM authors
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values ).first
+    return Author.new( results )
   end
 
 

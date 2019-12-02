@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Bebas;
+  src: url(Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+  font-family: Solway;
+  src: url(Solway/Solway-Regular.ttf);
+}
+
+
+h1{
+  font-family: Bebas;
+  color: white;
+}

@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Your Book Inventory</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+  <title>Your Book Inventory</title>
 <body>
 
-<main>
+
   <nav>
-    <a class = "nav-link" href="#">Display all authors</a>
+    <a href="/authors">Display all authors</a>
+    <a href="/books">Display all books</a>
+    <a href="/book/new">Add Book</a>
   </nav>
 
-  <section id = "content">
-    <%= yield %>
-  </section>
 
-</main>
+    <%= yield %>
+
+
 
 </body>
 </html>
