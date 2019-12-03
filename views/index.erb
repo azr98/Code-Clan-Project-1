@@ -11,6 +11,12 @@
     <td><a href="/books/<%= book.id %>"><%= book.name %></a></td>
     <td>|</td>
     <td><%= book.stock %></td>
+    <td><form class="" action="/book/<%= book.id %>/delete" method="post">
+      <input type="submit" value="Delete book">
+    </form>
+    </td>
   </tr>
+
   <% end %>
+
 </table>

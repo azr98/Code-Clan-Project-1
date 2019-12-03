@@ -14,6 +14,6 @@ end
 
 get '/authors/:id' do
   @author = Author.find(params['id'].to_i)
-
+  
   erb(:'authors/show')
 end

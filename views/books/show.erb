@@ -6,7 +6,7 @@
 
 <ul>
   <li>Description: <%=@book.description%></li>
-  <li>Cost: £<%=@book.cost%></li>
+  <li class= "<%= @book.stock < 5 ? "high": "low" %>" >Cost: £<%=@book.cost%></li>
   <li>Selling Price: £<%=@book.sell_price%></li>
   <li>Author: <%=@author.name%></li>
 </ul>

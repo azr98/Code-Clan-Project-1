@@ -1,0 +1,33 @@
+<form class="" action="/books" method="post">
+  <label for="name">Book title</label>
+  <input type="text" name="name" id="name">
+
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description">
+
+  <label for="stock">Stock</label>
+  <input min="0" type="number" name="stock" id="stock">
+
+  <label for="cost">Cost</label>
+  <input min ="0" type="number" name="cost" id="cost">
+
+  <label for="sell-price">Sale Price</label>
+  <input min = "0" type="number" name="sell-price" id="sell-price">
+
+  <label for="ganre">Genre</label>
+  <input type="text" name="genre" id="genre">
+
+
+  <br>
+
+  <label for="author-select">Author</label>
+  <select class="" name="author_id" id="author">
+    <% for author in @authors %>
+    <option value="<%= author.id %>">
+      <%= author.name %>
+      <% end %>
+    </option>
+    </select>
+
+  <input type="submit" value="Add book to inventory">
+</form>

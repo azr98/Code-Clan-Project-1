@@ -13,3 +13,8 @@ h1{
   font-family: Bebas;
   color: white;
 }
+
+p,a,form,{
+  font-family: Solway;
+  color: white;
+}
