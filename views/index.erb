@@ -1,5 +1,7 @@
 <h1>Here are all of your current books</h1>
 
+
+
 <table>
   <tr>
     <th>Title</th>
@@ -9,10 +11,11 @@
     <th>Author</th>
   </tr>
   <% for book in @books %>
+
   <tr>
     <td><a href="/books/<%= book.id %>"><%= book.name %></a></td>
     <td>|</td>
-    <td><%= book.stock %></td>
+    <td class= "<%= book.stock < 5 ? "low": "high" %>" > <%= book.stock %> </td>
     <td>|</td>
     <td><%= book.author.name %></td>
 
@@ -29,6 +32,8 @@
     </td>
 
     <br>
+    <td>|</td>
+    <td>Markup <%= (book.cost/book.sell_price)*100 %> % </td>
   </tr>
 
   <% end %>

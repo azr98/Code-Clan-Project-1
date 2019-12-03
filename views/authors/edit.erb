@@ -1,0 +1,12 @@
+<form class="" action="/authors/<%= @author.id %>/edit" method="post">
+  <label for="name">Author name</label>
+  <input type="text" name="name" id="name" value="<%=@author.name  %>">
+
+  <label for="background">Author background</label>
+  <input type="text" name="background" id="background" value="<%=@author.background  %>">
+
+  <label for="num-of-books">Number of books published</label>
+  <input min="0" type="number" name="num-of-books" id="num-of-books" value="<%=@author.num_of_books %>">
+
+  <input type="submit" value="Update author in inventory">
+<form/>

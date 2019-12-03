@@ -8,6 +8,9 @@
   src: url(Solway/Solway-Regular.ttf);
 }
 
+body{
+  background-color: black;
+}
 
 h1{
   font-family: Bebas;
@@ -20,5 +23,9 @@ p,a,td{
 }
 
 .high{
+  background-color: green;
+}
 
+.low{
+  background-color: red;
 }

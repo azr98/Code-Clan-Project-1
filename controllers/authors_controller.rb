@@ -27,3 +27,14 @@ post '/authors' do
   @author.save
   redirect('/authors')
 end
+
+get '/authors/:id/edit' do
+  @author = Author.find(params[:id])
+  erb(:'authors/edit')
+end
+
+post '/authors/:id/edit' do
+  author = Author.new(params)
+  author.update
+  redirect('/authors')
+end

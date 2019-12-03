@@ -9,7 +9,10 @@
   <td>|</td>
   <td><%= author.background %></td>
   <td>|</td>
-  <td>author.num_of_books</td>
+  <td><%= author.num_of_books %></td>
+  <form class="" action="/authors/<%= author.id %>/edit" method="get">
+    <input type="submit" value="Edit author">
+  </form>
 </tr>
 <br>
 <br>
