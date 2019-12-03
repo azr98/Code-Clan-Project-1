@@ -39,7 +39,7 @@ class Book
 
   def self.destroy(id)
     sql = "DELETE FROM books WHERE id = $1"
-    values = [@id]
+    values = [id]
     SqlRunner.run(sql,values)
   end
 
@@ -57,6 +57,12 @@ class Book
     result = SqlRunner.run(sql,values)[0]
 
     return Author.new(result)
+  end
+
+  def update()
+    sql = "UPDATE books SET (name,description,stock,cost,genre,sell_price,author_id) = ($1,$2,$3,$4,$5,$6,$7) WHERE id = $8 "
+    values = [@name,@description,@stock,@cost,@genre,@sell_price,@author_id,@id]
+    SqlRunner.run(sql,values)
   end
 
 

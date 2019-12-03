@@ -5,16 +5,30 @@
     <th>Title</th>
     <th></th>
     <th>Stock</th>
+    <th></th>
+    <th>Author</th>
   </tr>
   <% for book in @books %>
   <tr>
     <td><a href="/books/<%= book.id %>"><%= book.name %></a></td>
     <td>|</td>
     <td><%= book.stock %></td>
-    <td><form class="" action="/book/<%= book.id %>/delete" method="post">
-      <input type="submit" value="Delete book">
-    </form>
+    <td>|</td>
+    <td><%= book.author.name %></td>
+
+    <td>
+      <form class="" action="/book/<%= book.id %>/delete" method="post">
+        <input type="submit" value="Delete book">
+      </form>
     </td>
+
+    <td>
+      <form class="" action="/book/<%= book.id %>/edit" method="get">
+        <input type="submit" value="Edit book">
+      </form>
+    </td>
+
+    <br>
   </tr>
 
   <% end %>

@@ -9,4 +9,5 @@
   <li class= "<%= @book.stock < 5 ? "high": "low" %>" >Cost: £<%=@book.cost%></li>
   <li>Selling Price: £<%=@book.sell_price%></li>
   <li>Author: <%=@author.name%></li>
+  <li>Gross margin: <%= (@book.cost/@book.sell_price)*100 %> %</li>
 </ul>

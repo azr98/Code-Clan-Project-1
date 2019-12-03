@@ -1,0 +1,33 @@
+<form class="" action="/books/<%= @book.id %>/edit" method="post">
+  <label for="name">Book title</label>
+  <input type="text" name="name" id="name" value="<%=@book.name  %>">
+
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description" value="<%=@book.description  %>">
+
+  <label for="stock">Stock</label>
+  <input min="0" type="number" name="stock" id="stock" value="<%=@book.stock  %>">
+
+  <label for="cost">Cost</label>
+  <input min ="0" type="number" name="cost" id="cost" value="<%=@book.cost  %>">
+
+  <label for="sell-price">Sale Price</label>
+  <input min = "0" type="number" name="sell-price" id="sell-price" value="<%=@book.sell_price %>">
+
+  <label for="genre">Genre</label>
+  <input type="text" name="genre" id="genre" value="<%=@book.genre %>">
+
+
+  <br>
+
+  <label for="author-select">Author</label>
+  <select class="" name="author_id" id="author">
+    <% for author in @authors %>
+    <option value="<%= author.id %>">
+      <%= author.name %>
+      <% end %>
+    </option>
+    </select>
+
+    <input type="submit" value="Update book in inventory">
+  <form/>

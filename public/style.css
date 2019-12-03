@@ -14,7 +14,11 @@ h1{
   color: white;
 }
 
-p,a,form,{
+p,a,td{
   font-family: Solway;
   color: white;
+}
+
+.high{
+
 }

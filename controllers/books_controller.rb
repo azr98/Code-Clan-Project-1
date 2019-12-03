@@ -34,3 +34,15 @@ post '/book/:id/delete' do
   Book.destroy(params[:id])
   redirect('/books')
 end
+
+get '/book/:id/edit' do
+  @book = Book.find(params[:id])
+  @authors = Author.all
+  erb(:'books/edit')
+end
+
+post '/books/:id/edit' do
+  book = Book.new(params)
+  book.update
+  redirect('/books')
+end
