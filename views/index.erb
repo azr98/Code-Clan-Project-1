@@ -1,4 +1,9 @@
-<h1>Here are all of your current books</h1>
+<div id="heading-row">
+
+  <div class="column"><img src="book-shelf.jpg" alt=""></div>
+  <div class="column"><h1>Your Book Inventory</h1></div>
+
+</div>
 
 
 
@@ -9,6 +14,7 @@
     <th>Stock</th>
     <th></th>
     <th>Author</th>
+    <th>Markup</th>
   </tr>
   <% for book in @books %>
 
@@ -33,7 +39,7 @@
 
     <br>
     <td>|</td>
-    <td>Markup <%= (book.cost/book.sell_price)*100 %> % </td>
+    <td><%= book.sell_price%> % </td>
   </tr>
 
   <% end %>
