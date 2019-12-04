@@ -12,14 +12,16 @@ body{
   background-color: black;
 }
 
-h1{
+th,h3{
   font-family: Bebas;
   color: white;
+  font-size: 30px;
 }
 
-p,a,td{
+p,a,td,li,label,input,option{
   font-family: Solway;
   color: white;
+  font-size: 20px;
 }
 
 .high{
@@ -28,4 +30,35 @@ p,a,td{
 
 .low{
   background-color: red;
+}
+
+
+nav{
+  justify-content: space-between;
+  background-image: url('wood-strip.jpg');
+  color: black;
+  font-size: 25px;
+}
+
+table{
+  width:100%;
+  border: 5px solid white;
+  text-align: center;
+}
+
+h1{
+  font-size: 50px;
+  font-family: Bebas;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.heaing-row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
