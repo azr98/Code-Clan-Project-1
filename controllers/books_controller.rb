@@ -1,7 +1,7 @@
 require( 'sinatra' )
-require( 'sinatra/contrib/all' )
+require( 'sinatra/contrib/all' ) if development?
 require( 'pry-byebug' )
-also_reload( '../models/*' )
+
 
 require_relative('../models/Author')
 require_relative('../models/Book')
