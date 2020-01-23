@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
   <title>Your Book Inventory</title>
 <body>
 
 
   <nav>
-    <a href="/books">Display all books</a>
-    <a href="/authors">Display all authors</a>
-    <a href="/book/new">Add Book</a>
-  
+    <a href="/books">| Display all books |</a>
+    <a href="/authors">| Display all authors | </a>
+    <a href="/book/new">| Add a book |</a>
+    <a href="/author/new">| Add an author |</a>
+
   </nav>
 
-
-    <%= yield %>
+<main>
+  <%= yield %>
+</main>
+  
 
 
 
