@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
+require('pry')
 also_reload( '../models/*' )
 
 require_relative('../models/Author')

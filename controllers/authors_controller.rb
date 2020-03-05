@@ -1,11 +1,11 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
-also_reload( '../models/*' )
+require('pry')
 
 require_relative('../models/Author')
 require_relative('../models/Book')
-
+also_reload( '../models/*' )
 
 get '/authors' do
   @authors = Author.all

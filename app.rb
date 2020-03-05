@@ -6,3 +6,7 @@ require_relative('controllers/books_controller')
 
 require_relative('models/Author')
 require_relative('models/Book')
+
+get '/' do
+  erb(:index)
+end
